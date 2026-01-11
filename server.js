@@ -1,14 +1,12 @@
-const express = require('express')
+const express = require("express");
+const app = express();
 
-const app = express()
-const port = 3000
-
-
+// route
 app.get("/", (req, res) => {
-    
-    res.sendFile('hello.html',{root:__dirname})
-})
+  res.sendFile("hello.html", { root: __dirname });
+});
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+// ✅ YAHAN DAALNA HAI (LAST)
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running");
+});
